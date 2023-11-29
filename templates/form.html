@@ -1,0 +1,12 @@
+{% extends 'main.html' %} {% block content %}
+<form action="/story">
+  {% for word in prompts %}
+
+  <p>{{word}}:</p>
+  <input type="text" name="{{word}}" />
+
+  {% endfor %}
+  <button>Submit</button>
+</form>
+
+{% endblock %}
